@@ -71,3 +71,15 @@ t=x2;
 L=b-a;
 else("neteisingai ivesti duomenys")
 end
+
+>> y(t)/x1
+
+ans =
+
+   18.1994
+
+>> y(t)/x2
+
+ans =
+
+    6.5998
