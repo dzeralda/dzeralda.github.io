@@ -59,3 +59,15 @@ y =
   212.0027
 
 >> 
+>> if y(x1)<y(t)
+t==x1;
+L=b-a;
+else 
+if (y(x1)<y(t))
+t==x1;
+L=b-a;
+else if(y(x1)>=y(t))
+t=x2;
+L=b-a;
+else("neteisingai ivesti duomenys")
+end
