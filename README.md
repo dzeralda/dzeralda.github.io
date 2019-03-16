@@ -46,3 +46,26 @@ function manofun = y(t)
 manofun = 165/t + 9*t;
 end
 ```
+## 3. Matlab aplinkoje suprogramuokite intervalo dalijimo pusiau metodą (tegu 𝑎 = 1, 𝑏 = 30). 
+
+```javascript
+function dalijimas_pusiau
+t=(a+b)/2; %randame intervalo vidurio taska
+L=b-a; %randame intervalo ilgi
+y=165/t+9*t; %apskaiciuojame f(t)
+x1=a+L/4;
+x2=b-L/4;
+y=165/x1+9*x1; %apskaiciuojame f(x1)
+y=165/x2+9*x2; %apskaiciuojame f(x2)
+if (y(x1)<y(t))
+t==x1;
+L=b-a;
+else if (y(x1)<y(t))
+t==x1;
+L=b-a;
+else if(y(x1)>=y(t))
+t=x2;
+L=b-a;
+else("neteisingai ivesti duomenys")
+end
+```
