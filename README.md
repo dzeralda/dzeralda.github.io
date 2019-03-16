@@ -9,6 +9,22 @@ Pirmiausiai susirandame c, c2, b reikšmes pagal duotas formules bei pagal mano 
 
 ![prekestonomis](https://latex.codecogs.com/gif.latex?b%3D%5Cfrac%7BStudnr*mod*7%7D%7B2%7D&plus;2%2C5)
 
+```
+>> b=(mod(20171265,7)/2)+2,5;
+
+b =
+
+     3
+```
+
 ![partijoskaina](https://latex.codecogs.com/gif.latex?c2%3D%28studnr*mod*30%29&plus;150)
+
+```
+>> c2=(mod(20171265,30))+150
+
+c2 =
+
+   165
+```
 
 ![islaidos](https://latex.codecogs.com/gif.latex?c%3Dstudnr*mod*5&plus;3)
