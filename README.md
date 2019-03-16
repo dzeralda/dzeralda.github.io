@@ -67,5 +67,5 @@ else if(y(x1)>=y(t))
 t=x2;
 L=b-a;
 else("neteisingai ivesti duomenys")
-end
+    end
 ```
