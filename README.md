@@ -69,3 +69,9 @@ L=b-a;
 else("neteisingai ivesti duomenys")
 end
 ```
+## 4.  Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką
+(prekių vežimo intervalą). 
+Rastas optimalus prekių vežimo periodas bus intervalas. Paimkite jo
+vidurinę reikšmę ir suapvalinkite ją iki sveikojo skaičiaus į vieną ir kitą pusę. Iš gautų dviejų
+reikšmių išrinkite optimalų sprendinį (kad tikslo funkcijos reikšmė būtų mažesnė). Taip pat
+apskaičiuokite optimalią prekių partijos apimtį. 
