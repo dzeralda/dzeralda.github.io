@@ -60,13 +60,18 @@ y=165/x2+9*x2; %apskaiciuojame f(x2)
 if (y(x1)<y(t))
 t==x1;
 L=b-a;
-else if (y(x1)<y(t))
-t==x1;
-L=b-a;
 else if(y(x1)>=y(t))
-t=x2;
-L=b-a;
+        if(y(x2)<y(t))
+            t==x2;
+            L=b-a;
+        else if(y(x2)>=y(t)
+                a=x1;
+                b=x2;
+                L=b-a;
 else("neteisingai ivesti duomenys")
+            end
+        end
+    end
 end
 ```
 ## 4.  Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą). 
