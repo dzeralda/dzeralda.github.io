@@ -64,7 +64,7 @@ else if(y(x1)>=y(t))
         if(y(x2)<y(t))
             t==x2;
             L=b-a;
-        else if(y(x2)>=y(t)
+        else if(y(x2)>=y(t))
                 a=x1;
                 b=x2;
                 L=b-a;
