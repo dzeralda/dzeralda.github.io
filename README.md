@@ -57,13 +57,12 @@ iteration = 1; % pažymime iteraciją
     manofun=y(t); % apskaiciuojame tikslo funkcijos reiksme intervalo vidurio taske
     x1=a+L/4;
     x2=b-L/4;
-    fx1=tikslo(x1);
-    fx2=tikslo(x2);
-%po pirmos iteracijos gauname, kad f(x1)<f(x_m), todel  naikinam intervala
+    fx1=y(x1);
+    fx2=y(x2);
+%po pirmos iteracijos gauname, kad f(x1)<f(t), todel  naikinam intervala
 %(t,b)ir b perkeliama i t
 naujasb=t
 naujasL=naujasb-a
-
 ```
 ## 4.  Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą). 
 Rastas optimalus prekių vežimo periodas bus intervalas. Paimkite jo
