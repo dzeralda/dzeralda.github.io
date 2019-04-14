@@ -49,30 +49,21 @@ end
 ## 3. Matlab aplinkoje suprogramuokite intervalo dalijimo pusiau metodą (tegu 𝑎 = 1, 𝑏 = 30). 
 
 ```javascript
-function dalijimas_pusiau
-t=(a+b)/2; %randame intervalo vidurio taska
-L=b-a; %randame intervalo ilgi
-y=165/t+9*t; %apskaiciuojame f(t)
-x1=a+L/4;
-x2=b-L/4;
-y=165/x1+9*x1; %apskaiciuojame f(x1)
-y=165/x2+9*x2; %apskaiciuojame f(x2)
-if (y(x1)<y(t))
-t==x1;
-L=b-a;
-else if(y(x1)>=y(t))
-        if(y(x2)<y(t))
-            t==x2;
-            L=b-a;
-        else if(y(x2)>=y(t))
-                a=x1;
-                b=x2;
-                L=b-a;
-else("neteisingai ivesti duomenys")
-            end
-        end
-    end
-end
+iteration = 1; % pažymime iteraciją
+    a=1;
+    b=30;
+    t=(a+b)/2; % randame intervalo vidurio taska
+    L=b-a; %apskaiciuojame intervalo ilgi
+    manofun=y(t); % apskaiciuojame tikslo funkcijos reiksme intervalo vidurio taske
+    x1=a+L/4;
+    x2=b-L/4;
+    fx1=tikslo(x1);
+    fx2=tikslo(x2);
+%po pirmos iteracijos gauname, kad f(x1)<f(x_m), todel  naikinam intervala
+%(t,b)ir b perkeliama i t
+naujasb=t
+naujasL=naujasb-a
+
 ```
 ## 4.  Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą). 
 Rastas optimalus prekių vežimo periodas bus intervalas. Paimkite jo
