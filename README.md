@@ -1,9 +1,9 @@
 # dzeralda.github.io
-## 1. Sudarykite uždavinio matematinį modelį.
+## Sudarykite uždavinio matematinį modelį.
 
 ![matematiniomodelioformule](https://latex.codecogs.com/gif.latex?min%20c%28t%29%3D%5Cfrac%7Bc2%7D%7Bt%7D&plus;c*t*b)
 
-## 2. Užrašykite tikslo funkciją.
+## Užrašykite tikslo funkciją.
 
 Pirmiausiai susirandame c, c2, b reikšmes pagal duotas formules bei pagal mano studento numerį, kuris yra 20171265.
 
@@ -46,7 +46,7 @@ function manofun = y(t)
 manofun = 165/t + 9*t;
 end
 ```
-## 3. Matlab aplinkoje suprogramuokite intervalo dalijimo pusiau metodą (tegu 𝑎 = 1, 𝑏 = 30). 
+## Matlab aplinkoje suprogramuokite intervalo dalijimo pusiau metodą (tegu 𝑎 = 1, 𝑏 = 30). 
 
 ```javascript
 iteration = 1; % pažymime iteraciją
@@ -136,7 +136,7 @@ function [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght1, xpoint, xvalue] 
     f_min = y2;                
 end
 ```
-## 4. Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą).
+## Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą).
 ```javascript
 function [q, t, x_min, f_min, task_islaidos, iteration, lenght] = islaidos(a, b)
   [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght, xpoint, xvalue] = dalijimas_pusiau(a, b);
