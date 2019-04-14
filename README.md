@@ -136,3 +136,29 @@ function [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght1, xpoint, xvalue] 
     f_min = y2;                
 end
 ```
+## 4. Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą).
+```javascript
+function [q, t, x_min, f_min, task_islaidos, iteration, lenght] = islaidos(a, b)
+  [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght, xpoint, xvalue] = dalijimas_pusiau(a, b);
+  % apskaičiuojam intervalo vidurio tašką
+  int_vid = (a_reiksm+b_reiksm)/2; 
+  %randam int. vid. taško apatinę ribą
+  int_apatinis = floor(int_vid);    
+  % funkcijos reikšmė int. vid. taško apatinėje riboje
+  f_int_apatinis = tikslo(int_apatinis);
+  % randam int. vid. taško viršutinę ribą ir apskaičiuojam funkcijos
+  % reikšmę joje
+  int_virsutinis = ceil(int_vid);            
+  f_int_virsutinis = tikslo(int_virsutinis);      
+  
+  %Tikrinam sąlygą ar viršutinė modelio reikšmė didesnė
+  if(f_int_apatinis > f_int_virsutinis)  
+  % jei taip -išsaugoma viršutinė reikšmė
+    task_islaidos = f_int_virsutinis;                        
+    t = int_virsutinis  
+  %jei ne - išsaugoma apatinė reikšmė
+  else 
+    task_islaidos = f_int_apatinis;                        
+    t = int_apatinis;                       
+  end
+```
