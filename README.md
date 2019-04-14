@@ -145,7 +145,7 @@ function [q, t, x_min, f_min, task_islaidos, iteration, lenght] = islaidos(a, b)
   %randam int. vid. taško apatinę ribą
   int_apatinis = floor(int_vid);    
   % funkcijos reikšmė int. vid. taško apatinėje riboje
-  f_int_apatinis = tikslo(int_apatinis);
+  f_int_apatinis = manofun(int_apatinis);
   % randam int. vid. taško viršutinę ribą ir apskaičiuojam funkcijos
   % reikšmę joje
   int_virsutinis = ceil(int_vid);            
