@@ -70,7 +70,7 @@ naujasL=naujasb-a
 ```
 Rašome funkciją dalijimo pusiau metodui
 ```javascript
-function [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght1, xpoint, xvalue] = dalijimas_pusiau(a, b)
+function [x_min, f_min, a_reiksm, b_reiksm, iteration, length1, xpoint, xvalue] = dalijimas_pusiau(a, b)
     iteration = 1;               %iteracija nr.1
     t = (a + b)/2;             %randame intervalo vidurio taska
     L = b - a;                   %apskaiciuojame intervalo ilgi
@@ -88,7 +88,7 @@ Nauja intervalo pradžia, pabaiga ir ilgis
 ```javascript
     a_reiksm = a;     
     b_reiksm = b;     
-    lenght1 = L;            
+    length1 = L;            
 ```
 Ciklą kartosime kol gausime norimus rezultatus
 ```javascript
@@ -138,7 +138,7 @@ Kai gauname naują vidurio tašką, apskaičiuojame funkcijos reikšmę
 Tenkinant žemiau esančią sąlygą, ciklas per naujo leidžiamas ir naujos reikšmės yra išsaugomos
 ```javascript
         if(y2 > y1)        
-            lenght1 = L;        
+            length1 = L;        
             a_reiksm = a; 
             b_reiksm = b; 
             x_min = t;       
@@ -153,8 +153,8 @@ end
 ```
 ## Raskite tikslo funkcijos minimumą (mažiausias prekybos bazės išlaidas) ir minimumo tašką (prekių vežimo intervalą).
 ```javascript
-function [q, t, x_min, f_min, task_islaidos, iteration, lenght] = islaidos(a, b)
-  [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght, xpoint, xvalue] = dalijimas_pusiau(a, b);
+function [q, t, x_min, f_min, task_islaidos, iteration, length] = islaidos(a, b)
+  [x_min, f_min, a_reiksm, b_reiksm, iteration, length, xpoint, xvalue] = dalijimas_pusiau(a, b);
 ``` 
 Apskaičiuojame intervalo vidurio tašką
 ```javascript
@@ -192,8 +192,8 @@ Tada sudarome vektorių ir randame išlaidas kiekviename taške
 ```
 Taikome auksinį pjūvį ir kvadratinę interpoliaciją
 ```javascript
-optimization = optimset('Display', 'iter','MaxFunEvals', 1000,'PlotFcns', @optimplotfval , 'TolX', lenght);
-  [xfminbnd, yfminbnd] = fminbnd(@tikslo, a, b, optimization)
+optimization = optimset('Display', 'iter','MaxFunEvals', 1000,'PlotFcns', @optimplotfval , 'TolX', length);
+  [xfminbnd, yfminbnd] = fminbnd(@manofun, a, b, optimization)
 ```
 Atvaizduojame išlaidų kitimą pagal t
 ```javascript
