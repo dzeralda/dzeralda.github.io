@@ -185,3 +185,20 @@ Tikriname sąlygą ar viršutinė modelio reikšmė didesnė
     t = int_apatinis;                       
   end
 ```
+Tada sudarome vektorių ir randame išlaidas kiekviename taške
+```javascript
+  x = a:1:b;                      
+  y = manofun(t);                         
+```
+Taikome auksinį pjūvį ir kvadratinę interpoliaciją
+```javascript
+optimization = optimset('Display', 'iter','MaxFunEvals', 1000,'PlotFcns', @optimplotfval , 'TolX', lenght);
+  [xfminbnd, yfminbnd] = fminbnd(@tikslo, a, b, optimization)
+```
+Atvaizduojame išlaidų kitimą pagal t
+```javascript
+  figure 
+  plot(x, y, '.-', xpoint, xvalue, '.-'), legend('Išlaidos kiekviename taške', 'Intervalo dalijimo pusiau metodas'); 
+  xlabel('Laikas (t)');
+  ylabel('Išlaidos per dieną'); 
+```
