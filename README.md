@@ -155,18 +155,26 @@ end
 ```javascript
 function [q, t, x_min, f_min, task_islaidos, iteration, lenght] = islaidos(a, b)
   [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght, xpoint, xvalue] = dalijimas_pusiau(a, b);
-  % apskaičiuojam intervalo vidurio tašką
+``` 
+Apskaičiuojame intervalo vidurio tašką
+```javascript
   int_vid = (a_reiksm+b_reiksm)/2; 
-  %randam int. vid. taško apatinę ribą
-  int_apatinis = floor(int_vid);    
-  % funkcijos reikšmė int. vid. taško apatinėje riboje
+```  
+Randame intervalo vidurio taško apatinę ribą
+```javascript
+  int_apatinis = floor(int_vid); 
+```
+Funkcijos reikšmė intervalo vidurio taško apatinėje riboje
+```javascript
   f_int_apatinis = manofun(int_apatinis);
-  % randam int. vid. taško viršutinę ribą ir apskaičiuojam funkcijos
-  % reikšmę joje
+```
+Randame intervalo vidurio taško viršutinę ribą ir apskaičiuojame funkcijos reikšmę joje
+```javascript
   int_virsutinis = ceil(int_vid);            
   f_int_virsutinis = tikslo(int_virsutinis);      
-  
-  %Tikrinam sąlygą ar viršutinė modelio reikšmė didesnė
+```
+Tikriname sąlygą ar viršutinė modelio reikšmė didesnė
+```javascript
   if(f_int_apatinis > f_int_virsutinis)  
   % jei taip -išsaugoma viršutinė reikšmė
     task_islaidos = f_int_virsutinis;                        
