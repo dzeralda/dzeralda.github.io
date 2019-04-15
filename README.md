@@ -76,58 +76,67 @@ function [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght1, xpoint, xvalue] 
     L = b - a;                   %apskaiciuojame intervalo ilgi
     y = manofun(t);          %apskaiciuojame funkcijos reiksme intervalo vidurio taske
     x_min = t;                 %fiksuojame minimalu intervalo vidurio taska
-    
-    %priskiriame naujas reiksmes 
+```
+Priskiriame naujas reikšmes
+```javascript
     y1 = y;           
-    y2 = y;              
-    
+    y2 = y;               
     xpoint(iteration) = t;   %fiksuojame taška
-    xvalue(iteration) = y1; %fiksuojame f-jos reikšmė t taške 
-    %nauja intervalo pradžia, pabaiga ir ilgis
+    xvalue(iteration) = y1; %fiksuojame f-jos reikšmė t taške
+```   
+Nauja intervalo pradžia, pabaiga ir ilgis
+```javascript
     a_reiksm = a;     
     b_reiksm = b;     
     lenght1 = L;            
- 
-    %ciklą kartosime kol gausime norimus rezultatus
+```
+Ciklą kartosime kol gausime norimus rezultatus
+```javascript
     while y2 >= y1
-    iteration = iteration + 1; 
-    %dalijame intervala i keturias lygias dalis. Kadangi t jau turim, tai
-    %apskaiciuosim dar x1 ir x2
+    iteration = iteration + 1;
+```
+Dalijame intervalą į keturias lygias dalis. Kadangi t jau turime, tai apskaičiuosime dar x1 ir x2
+```javascript
         x1 = a + L/4; 
-        x2 = b - L/4; 
-        % apskaiciuojam funkcijos reiksme taske x1 ir x2
+        x2 = b - L/4;
+```
+Apskaičiuojame funkcijos reikšmę taške x1 ir x2
+```javascript
         fx1 = manofun(x1); 
         fx2 = manofun(x2); 
-        
-%Toliau vertiname gautus rezultatus. 
-%Pradzioje lyginame funkcijos reiksme x1 taske su t vidurio tasko reiksme. 
-%Jeigu ji mazesne, tada naikinam (t,b) intervala ir:
+```       
+Toliau vertiname gautus rezultatus. 
+Pradžioje lyginame funkcijos reikšmę x1 taške su t vidurio taško reikšme. Jeigu ji mažesnė, tada naikinam (t,b) intervalą
+```javascript
         if(fx1 < y)
             b = t;           %vidurio taskas tampa intervalo pabaiga
             t = x1;          %nauju vidurio tasku tampa x1 
         else
-            
-%Jei f(x1)>=f(t)arba f(x2)<f(t) - naikinam (a,t) intervala ir
-%intervalo pradzia perkeliam i vidurio taska.
+```           
+Jei f(x1)>=f(t)arba f(x2)<f(t) - naikiname (a,t) intervalą ir intervalo pradžią perkeliame į vidurio tašką.
+```javascript
             if(fx2 < y)                
                 a = t;       % prilyginam intervalo pradžia vidurio taškui
                 t = x2;      %buvęs vidurio taškas tampa nauja intervalo pabaiga
-%Jei f(x2)>=f(t), vidurio taskas islieka toks pats, taciau perkeliam a ir b:
+```
+Jei f(x2)>=f(t), vidurio taškas išlieka toks pats, tačiau perkeliame a ir b
+```javascript
             else
                 a = x1;    
                 b = x2;     
             end
         end
-        
-        %Kai gauname nauja vidurio taska, apskaiciuojame funkcijos reiksme.
+```       
+Kai gauname naują vidurio tašką, apskaičiuojame funkcijos reikšmę
+```javascript
         y1 = manofun(t);  
         %issaugome naujas reiksmes 
         xpoint(iteration) = t;   
         xvalue(iteration) = y1; 
         L = b - a;  
-        
-        % Tenkinant zemiau esancia salyga, ciklas per naujo leidziamas ir
-        % naujos reiksmes yra issaugomos
+```   
+Tenkinant žemiau esančią sąlygą, ciklas per naujo leidžiamas ir naujos reikšmės yra išsaugomos
+```javascript
         if(y2 > y1)        
             lenght1 = L;        
             a_reiksm = a; 
@@ -136,7 +145,9 @@ function [x_min, f_min, a_reiksm, b_reiksm, iteration, lenght1, xpoint, xvalue] 
             y2 = y1;       
         end
     end
- %surandame modelio minimalia reiksme
+ ```
+Surandame modelio minimalią reikšmę
+```javascript
     f_min = y2;                
 end
 ```
