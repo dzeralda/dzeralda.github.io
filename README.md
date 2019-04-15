@@ -171,7 +171,7 @@ Funkcijos reikšmė intervalo vidurio taško apatinėje riboje
 Randame intervalo vidurio taško viršutinę ribą ir apskaičiuojame funkcijos reikšmę joje
 ```javascript
   int_virsutinis = ceil(int_vid);            
-  f_int_virsutinis = tikslo(int_virsutinis);      
+  f_int_virsutinis = manofun(int_virsutinis);      
 ```
 Tikriname sąlygą ar viršutinė modelio reikšmė didesnė
 ```javascript
