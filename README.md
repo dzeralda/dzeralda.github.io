@@ -54,13 +54,17 @@ iteration = 1; % pažymime iteraciją
     b=30;
     t=(a+b)/2; % randame intervalo vidurio taska
     L=b-a; %apskaiciuojame intervalo ilgi
-    manofun=y(t); % apskaiciuojame tikslo funkcijos reiksme intervalo vidurio taske
+```
+Apskaičiuojame tikslo funkcijos reiksmę intervalo vidurio taške
+```javascript
+    manofun=y(t); 
     x1=a+L/4;
     x2=b-L/4;
     fx1=y(x1);
     fx2=y(x2);
-%po pirmos iteracijos gauname, kad f(x1)<f(t), todel  naikinam intervala
-%(t,b)ir b perkeliama i t
+```
+po pirmos iteracijos gauname, kad f(x1)<f(t), todel  naikinam intervala (t,b)ir b perkeliama i t
+```javascript
 naujasb=t
 naujasL=naujasb-a
 ```
