@@ -1,65 +1,71 @@
-Pirmiausiai nuskaitome naudojama duomenu faila
+2 laboratoriniam darbui naudojama duomenu lentele sudaryta is Statistikos departamento tinklalapyje rastu duomenu.
 ```{r}
-adresas<-"http://fmf.vgtu.lt/~trekasius/da/sdan_data05.txt"
-d<-read.table(file=adresas, header = TRUE)
+getwd()
+setwd("C:")
+data=read.table("data-table.txt", header=TRUE)
 ```
-Susikuriame patogias naudoti darbui reiksmes(t.y. persivadinam savo turimus parametrus) 
+Pirmiausia su sia funkcija aprasome kainu kitima iki euro ivedimo Y(t) = a_0 + a_1*t + e(t), t <= k
+cia k yra euro ivedimo momentas t.y. 20150101
 ```{r}
-summary(d)
-rank=data$rank
-sco=data$score
-plu=data$pluralism
-gov=data$government
-part=data$participation
-cult=data$culture
-liber=data$liberties
+k=20150101
+prieseura<-a_0 + a_1*t + e(t)
 ```
-p_sco pazymime Y (t.y. score) prognoze
+po euro ivedimo kainu kitimas aprasomas pagal sia funkcija
 ```{r}
-p_sco = log(sco,exp(1)).
-par(mfrow = c(1, 1))
-plot(rank,sco)
+k=20150101
+poeuro<-b_0 + b_1*t + e(t)
 ```
-A atvejis. Modeliui naudojame visus galimus parametrus. Ivertiname modelio parametrus, braizome histograma, QQ grafika, atliekame Shapiro testa.
+Ivedamas apribojimas tam, kad lauzte tam tikru laiko momentu susikirstu. Jis aprasomas tokia funkcija: a_0 + a_1*k = b_0 + b_1*k
 ```{r}
-par(mfrow = c(1, 4))
-qqnorm(sco)
-qqline(sco, col = "lightcoral", lwd = 2)
-hist(sco)
-shapiro.test(sco)
-
-par(mfrow = c(1, 2))
-qqnorm(p_sco)
-qqline(p_sco, col = "lightcoral", lwd = 2)
-hist(p_sco)
-lines(density(p_sco),col=2)
-shapiro.test(p_sco)
+apribojimas<-a_0 + a_1*k = b_0 + b_1*k
 ```
-Tiesines regresijos lygtis siuo atveju, kadangi naudojame visus duotus parametrus
+##PLANO MATRICOS SUDARYMAS
+Pagal paskutine funkcija kur aprasomas apribojimas tam, kad lauzte susikirstu galima isskirti parametra b_0 ir isreiksti ji per kitus parametrus.
 ```{r}
-lm.rezultatas=lm(sco~rank+plu+gov+part+cult+liber)
-summary(lm.rezultatas)
+b_0= a_0+(a_1-b_1)k
 ```
-B atvejis. Tikriname kaip Y korealiuoja su kitais parametrais ir turime isskirti 3 labiausiai korealiuojancius.
+Y reiksmes gausime pagal pagal formule
 ```{r}
-cor(rank, sco)
-cor(plu, sco)
-cor(gov, sco)
-cor(part, sco)
-cor(cult, sco)
-cor(liber, sco)
+Y = Xβ + E.
 ```
-Labiausiai su score korealiuoja rank, plu ir liber
+Parametrai β = (a_o, a_1, b_1)T duoti. Uzrasom transponuota matrica. 
 ```{r}
-lm.rezultatas=lm(sco~rank+plu+liber)
-summary(lm.rezultatas)
+β <- matrix(a_o, a_1, b_1)
+tβ <- β(a)
 ```
-C atvejis. Siuo atveju turetume tikrinti, kuris modelis geriausias is 3. T.y. rank, plu ar liber.
+Plano matricos X sudarymui galima taikyti ivairius metodus. Pasirinksime Empirini metoda.
+##EMPIRINIS METODAS
+Kadangi turime 3 nezinomuosius a_o, a_1 ir b_1. Tai bendras regresijos modelio pavidalas galetu atrodyti taip:
 ```{r}
-lm.rezultatas=lm(sco~rank)
-summary(lm.rezultatas)
-lm.rezultatas=lm(sco~plu)
-summary(lm.rezultatas)
-lm.rezultatas=lm(sco~liber)
-summary(lm.rezultatas)
+yt=a_o*kt0+a_1*kt1+b_1kt2+et
+```
+Kol kas prediktoriai k0, k1, k2 yra nenusakyti, bet juos lengva nustatyti, remiantis tuo, kad,
+kai kt=<k0, regresijos funkcija yra f1(k), kitais atvejais ji yra lygi f2(k). Be to turi būti
+patenkinta sujungimo sąlyga:
+```{r}
+b_0= a_0+(a_1-b_1)k
+```
+Iš čia aišku, kad kol kt =< k0, kt0 ≡ 1, o kt1 ≡ kt ir t.t...
+Taip pat turime patikrinti hipoteze ar kainos po euro ivedimo pradejo keistis greiciau ar leciau
+##HIPOTEZES TIKRINIMAS
+Kai hipoteze teisinga ir funkcija yra tiese
+```{r}
+teis_hip<-a_1 == b_1
+```
+Kai hipoteze neteisinga ir funkcija nera tiese
+```{r}
+net_hip<-a_1 != b_1
+```
+Taip pat tikrinama hipoteze ar po euro ivedimo ivyko kainu suolis.
+Savo nuoziura isivedame kintami delta kuris zymi suolio dydi. Tai parinksime 0.1 kas reikstu 10 % kainos kitima.
+```{r}
+delta<-0.1
+```
+Kainu suolis ivyko
+```{r}
+suolis_yra<- b_0 - a_0 == delta
+```
+Kainu suolis neivyko
+```{r}
+suolio_nera<-b_0 - a_0 != delta
 ```
