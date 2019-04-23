@@ -19,8 +19,7 @@ Ivedamas apribojimas tam, kad lauzte tam tikru laiko momentu susikirstu. Jis apr
 ```{r}
 apribojimas<-a_0 + a_1*k = b_0 + b_1*k
 ```
-##PLANO MATRICOS SUDARYMAS
-
+## PLANO MATRICOS SUDARYMAS
 Pagal paskutine funkcija kur aprasomas apribojimas tam, kad lauzte susikirstu galima isskirti parametra b_0 ir isreiksti ji per kitus parametrus.
 ```{r}
 b_0= a_0+(a_1-b_1)k
@@ -35,7 +34,7 @@ Parametrai β = (a_o, a_1, b_1)T duoti. Uzrasom transponuota matrica.
 tβ <- β(a)
 ```
 Plano matricos X sudarymui galima taikyti ivairius metodus. Pasirinksime Empirini metoda.
-##EMPIRINIS METODAS
+## EMPIRINIS METODAS
 Kadangi turime 3 nezinomuosius a_o, a_1 ir b_1. Tai bendras regresijos modelio pavidalas galetu atrodyti taip:
 ```{r}
 yt=a_o*kt0+a_1*kt1+b_1kt2+et
@@ -48,7 +47,7 @@ b_0= a_0+(a_1-b_1)k
 ```
 Iš čia aišku, kad kol kt =< k0, kt0 ≡ 1, o kt1 ≡ kt ir t.t...
 Taip pat turime patikrinti hipoteze ar kainos po euro ivedimo pradejo keistis greiciau ar leciau
-##HIPOTEZES TIKRINIMAS
+## HIPOTEZES TIKRINIMAS
 Kai hipoteze teisinga ir funkcija yra tiese
 ```{r}
 teis_hip<-a_1 == b_1
