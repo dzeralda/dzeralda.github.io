@@ -20,6 +20,7 @@ Ivedamas apribojimas tam, kad lauzte tam tikru laiko momentu susikirstu. Jis apr
 apribojimas<-a_0 + a_1*k = b_0 + b_1*k
 ```
 ##PLANO MATRICOS SUDARYMAS
+
 Pagal paskutine funkcija kur aprasomas apribojimas tam, kad lauzte susikirstu galima isskirti parametra b_0 ir isreiksti ji per kitus parametrus.
 ```{r}
 b_0= a_0+(a_1-b_1)k
