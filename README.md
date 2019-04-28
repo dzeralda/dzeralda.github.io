@@ -1,1 +1,1 @@
-# dzeralda.github.io
+## 1. Tikslo funkcijos matematinė formulė. 
