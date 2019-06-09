@@ -48,7 +48,6 @@ x3(5,5858,4,9124)
 
 ![x3 atsakymas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B3%7D%29%3D69131%2C1296)
 
-f(x3)=69131,1296
 
 
 
