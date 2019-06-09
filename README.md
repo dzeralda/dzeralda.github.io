@@ -32,7 +32,9 @@ Apskaičiuojame reikšmes kai x1 (0,5176,1,9318):
 
 Apskaičiuojame reikšmes kai x2 (1,9318, 0,5176):
 
-f(x2)= 1033,83
+![x2 apskaiciavimas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B2%7D%29%3D100*%280%2C5176-1%2C9318%5E%7B2%7D%29%5E%7B2%7D&plus;%281-1%2C9318%29%5E%7B2%7D%3D100*%280%2C5176-3%2C7316%29%5E%7B2%7D&plus;%28-0%2C9318%29%5E%7B2%7D%3D100*%28-3%2C214%29%5E%7B2%7D%20&plus;0%2C8683%3D100*10%2C3297&plus;0%2C8683%3D1033%2C83)
+
+![x2 atsakymas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B2%7D%29%3D1033%2C83)
 
 Didžiausia reikšmė taške x2, tai apskaičiuojame taškų x1 ir x2 centrą pagal formulę xc=(x0+x1)/2
 
