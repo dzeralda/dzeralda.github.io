@@ -44,6 +44,10 @@ Naujas taškas apskaičiuojamas x3= x2+2(xc-x2)
 
 x3(5,5858,4,9124)
 
+![x3 apskaiciavimas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B3%7D%29%3D100*%284%2C9124-5%2C5858%5E%7B2%7D%29%5E%7B2%7D&plus;%281-5%2C5858%29%5E%7B2%7D%3D100*%284%2C9124-31%2C2012%29%5E%7B2%7D&plus;21%2C0296%3D100*691%2C1010&plus;%2021%2C0296%3D69131%2C1296)
+
+![x3 atsakymas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B3%7D%29%3D69131%2C1296)
+
 f(x3)=69131,1296
 
 
