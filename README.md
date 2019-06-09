@@ -24,11 +24,11 @@ Apskaičiuojame reikšmes kai x0 (3,5,3,5):
 
 ![x0 atsakymas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B0%7D%29%3D13%2C91)
 
-f(x0)= 13,91
-
 Apskaičiuojame reikšmes kai x1 (0,5176,1,9318):
 
-f(x1)= 277,09
+![x1 apskaiciavimas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B1%7D%29%3D100%281%2C9318-0%2C5176%5E%7B2%7D%29%5E%7B2%7D&plus;%281-0%2C5176%29%5E%7B2%7D%3D100%281%2C9318-0%2C2679%29%5E%7B2%7D&plus;0%2C2327%3D100*2%2C7686&plus;0%2C2327%3D277%2C09)
+
+![x1 atsakymas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B1%7D%29%3D277%2C09)
 
 Apskaičiuojame reikšmes kai x2 (1,9318, 0,5176):
 
