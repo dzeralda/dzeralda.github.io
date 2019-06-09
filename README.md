@@ -21,6 +21,7 @@ n-kintamuju skaicius 2
 Apskaičiuojame reikšmes kai x0 (3,5,3,5):
 
 ![x0 apskaiciavimas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B0%7D%29%3D100%283%2C5-3%2C5%5E%7B2%7D%29%5E%7B2%7D&plus;%281-3%2C5%29%5E%7B2%7D%3D100%283%2C5-12%2C25%29%5E%7B2%7D&plus;%28-2%2C5%29%5E%7B2%7D%3D100%28-8%2C75%29%5E%7B2%7D&plus;%28-2%2C5%29%5E%7B2%7D%3D100*76%2C56&plus;6%2C25%3D7%2C66&plus;6%2C25%3D13%2C91)
+
 ![x0 atsakymas](http://latex.codecogs.com/gif.latex?%5Cint%20%28x_%7B0%7D%29%3D13%2C91)
 
 f(x0)= 13,91
