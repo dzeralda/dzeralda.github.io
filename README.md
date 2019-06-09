@@ -3,6 +3,7 @@
 Skaičiavimai atliekami pasinaudojant studento numeriu, kuris šiuo atveju yra 20171265.
 Skaičiavimai buvo atliekami naudojantis Excel programa.
 ## Duoti kintamieji:
+
 x0-pradinės koordinatės (3,5;3,5)
 α-simplekso dydi reguliuojantis parametras 0,5
 n-kintamuju skaicius 2
