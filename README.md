@@ -23,3 +23,9 @@ Darbo laiko ištekliai per 10 darbo dienų – 780 val. Todėl turi būti patenk
 
 Analogišką nelygybę 1 klasės sąnaudoms. Per dvi darbo savaites turi būti sunaudota ne daugiau kaip 530
 
+![2_nel](http://latex.codecogs.com/gif.latex?5x_%7B1%7D&plus;4x_%7B2%7D&plus;8x_%7B3%7D&plus;5x_%7B4%7D%5Cleq%20530)
+
+Tokia pat nelygybę 2 klasės sąnaudoms. Per dvi darbo savaites turi būti sunaudota ne daugiau kaip
+865, jų kaina yra 15 eurų už vienetą
+
+![3_nel](http://latex.codecogs.com/gif.latex?12x_%7B1%7D&plus;8x_%7B2%7D&plus;10x_%7B3%7D&plus;3x_%7B4%7D%5Cleq%20865)
