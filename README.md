@@ -20,3 +20,6 @@ Atsakymas 265
 Darbo laiko ištekliai per 10 darbo dienų – 780 val. Todėl turi būti patenkinta nelygybė:
 
 ![1_nel](http://latex.codecogs.com/gif.latex?6x_%7B1%7D&plus;4x_%7B2%7D&plus;2x_%7B3%7D&plus;5x_%7B4%7D%5Cleq%20780)
+
+Analogišką nelygybę 1 klasės sąnaudoms. Per dvi darbo savaites turi būti sunaudota ne daugiau kaip 530
+
