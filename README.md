@@ -1,5 +1,5 @@
 # dzeralda.github.io
-Pagal studento numerį paskaičiuojamos reikšmės duomenų lentelėje (pateikta Excel faile).
+Pagal studento numerį paskaičiuojamos reikšmės duomenų lentelėje (pateikta Excel faile). 
 
 ## Skaičiuojame kitas trūkstamas reikšmes sąlygoje:
 
@@ -29,3 +29,5 @@ Tokia pat nelygybę 2 klasės sąnaudoms. Per dvi darbo savaites turi būti suna
 865, jų kaina yra 15 eurų už vienetą
 
 ![3_nel](http://latex.codecogs.com/gif.latex?12x_%7B1%7D&plus;8x_%7B2%7D&plus;10x_%7B3%7D&plus;3x_%7B4%7D%5Cleq%20865)
+
+## Visa tai ir kitas reikšmes skaičiuojame Matlab aplinkoje. Skaičiavimai surašyti .m faile.
